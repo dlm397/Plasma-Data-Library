@@ -1,0 +1,10 @@
+{
+  "paths": {
+    "data_dir": "storage\\data",
+    "log_file": "logs\\app.log"
+  },
+  "settings": {
+    "default_format": "csv",
+    "max_file_size_mb": 100
+  }
+}

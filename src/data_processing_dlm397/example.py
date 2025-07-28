@@ -1,10 +1,5 @@
-import numpy as np # type: ignore
+from data_save import save_data
+from config_loader import load_config, get_path, get_setting
+import numpy as np
 
-def add_one(number):
-    return number + 1
-
-def add_two(number):
-    return number + 2
-
-test = np.random.rand()
-print("Test", test)
+print(save_data([1,2,3,4], "test")) # np.random.rand(10,10)
