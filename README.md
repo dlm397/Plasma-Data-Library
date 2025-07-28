@@ -1,2 +1,2 @@
 ### Description
-> This is a personalized package, this will be updated.
+> Making a library of the common functions I use in processing plasma flux data. Hopefully it can be passed on to others after I upload my current progress and polish it. This will be updated.
