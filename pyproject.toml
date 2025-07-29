@@ -3,7 +3,7 @@ requires = ["hatchling >= 1.26"]
 build-backend = "hatchling.build"
 
 [project]
-name = "Data Processing for Plasma Data"
+name = "data_processing_dlm397"
 version = "1.0.0"
 authors = [
   { name="dlm397", email="dlm397@drexel.edu" },

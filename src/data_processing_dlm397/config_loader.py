@@ -30,3 +30,42 @@ def get_setting(key, config=None): # key input is some setting that is not a pat
     """Get a setting from the config."""
     config = config or load_config()
     return config.get("settings", {}).get(key, None)
+
+def save_config(data):
+    package_root = get_home_path() # Gets home directory
+    config_path="config\\config.json"
+    config_file = os.path.join(package_root, config_path)
+    with open(config_file, "w") as file:
+        json.dump(data, file, indent=4)
+    return True
+
+def change_path(key, change, config=None):
+    config = config or load_config()
+    if str(type(change)) == "<class 'str'>":
+        config["paths"][key] = change
+        result = save_config(config)
+        if result:
+            print("Path successfully updated")
+            return True
+        else:
+            print("Path did not update")
+            return False
+    else:
+        print("Config path doesn't exist, or change value not acceptable.")
+        return False
+    
+def change_setting(key, change, config=None):
+    config = config or load_config()
+    if str(type(change)) == "<class 'str'>" and key in config:
+        config["setting"][key] = change
+        result = save_config(config)
+        if result:
+            print("Path successfully updated")
+            return True
+        else:
+            print("Path did not update")
+            return False
+    else:
+        print("Config setting doesn't exist, or change value not acceptable.")
+        return False
+
