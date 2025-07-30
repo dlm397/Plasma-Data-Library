@@ -1,0 +1,3 @@
+from data_processing_dlm397.date_save import storage_file_exists
+
+storage_file_exists()

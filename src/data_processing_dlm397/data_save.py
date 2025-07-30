@@ -2,7 +2,7 @@ from config_loader import load_config, get_path, get_setting, get_home_path
 import numpy as np # type: ignore
 import os
 
-def data_file_check():
+def storage_file_exists():
     home_dir = get_home_path()
     storage_path = get_path("storage_dir")
     storage_dir = os.path.join(home_dir, storage_path)
@@ -27,7 +27,7 @@ def data_file_check():
             return False
 
 def save_data(data, file_name, path_key="data_dir"):
-    if not data_file_check():
+    if not storage_file_exists():
         return
     save_location = get_path(path_key)
     save_type = get_setting("default_format")
