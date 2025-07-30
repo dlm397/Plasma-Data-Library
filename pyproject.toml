@@ -3,7 +3,7 @@ requires = ["hatchling >= 1.26"]
 build-backend = "hatchling.build"
 
 [project]
-name = "data_processing_dlm397"
+name = "dlm397_package"
 version = "1.0.0"
 authors = [
   { name="dlm397", email="dlm397@drexel.edu" },
@@ -20,4 +20,4 @@ license-files = ["LICEN[CS]E*"]
 
 [project.urls]
 Homepage = "https://github.com/dlm397/Plasma_lib"
-Issues = "dlm397@drexel.edu"
+Issues = "https://github.com/dlm397/Plasma_lib"
